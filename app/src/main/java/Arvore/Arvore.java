@@ -12,8 +12,6 @@ import Utils.Helper;
 
 public class Arvore {
 
-
-    //teste
     private No raiz;
     private Map<String, No> mapNos;
 
