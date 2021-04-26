@@ -14,18 +14,8 @@
         android:layout_centerInParent="true"
         android:layout_marginEnd="65dp"
         android:layout_marginBottom="331dp"
-        android:text="Superficial" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="258dp"
-        android:layout_height="251dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:text="Escolha um tipo de classificação"
-        android:textAlignment="center"
-        android:textSize="36sp" />
+        android:text="Superficial"
+        app:backgroundTint="#AB824C" />
 
     <Button
         android:id="@+id/button_classificar_subsuperficial"
@@ -36,6 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="217dp"
-        android:text="Subsuperficial" />
+        android:text="Subsuperficial"
+        app:backgroundTint="#AB824C" />
 
 </RelativeLayout>

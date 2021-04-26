@@ -1,5 +1,6 @@
 package com.example.classificador.ui.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,6 +28,7 @@ import Entrada.Decisao;
 public abstract class PerguntaActivity extends AppCompatActivity {
 
     public abstract Handler getHideHandler();
+
     public abstract int getId();
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -34,6 +36,10 @@ public abstract class PerguntaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pergunta);
+
+        Button buttonSim = findViewById(R.id.button_sim);
+        Button buttonNao = findViewById(R.id.button_nao);
+        Button buttonReiniciar = findViewById(R.id.button_reiniciar);
 
         InputStream fisPlanilha = getResources().openRawResource(getId());
         List<Decisao> listaDecisao = new ArrayList<>();
@@ -59,9 +65,6 @@ public abstract class PerguntaActivity extends AppCompatActivity {
         TextView ajudTextView = findViewById(R.id.textView_ajuda);
         ajudTextView.setText(raiz.getTextoAjuda());
 
-        Button buttonSim = findViewById(R.id.button_sim);
-        Button buttonNao = findViewById(R.id.button_nao);
-
 
         buttonSim.setOnClickListener(v -> {
             service.direita();
@@ -72,7 +75,7 @@ public abstract class PerguntaActivity extends AppCompatActivity {
             service.esquerda();
             processaNoAtual(service, buttonSim, buttonNao);
         });
-
+        buttonReiniciar.setOnClickListener(v -> startActivity(new Intent(PerguntaActivity.this, MainActivity.class)));
     }
 
     private void processaNoAtual(ArvoreService service, Button buttonSim, Button buttonNao) {

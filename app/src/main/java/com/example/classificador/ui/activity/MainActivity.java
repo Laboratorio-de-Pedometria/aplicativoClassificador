@@ -3,7 +3,6 @@ package com.example.classificador.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,16 +19,8 @@ public class MainActivity extends AppCompatActivity {
         Button buttonClassificarSuperificial = findViewById(R.id.button_classificar_superficial);
 
 
-        buttonClassificarSuperificial.setOnClickListener(v -> {
-                    Toast.makeText(MainActivity.this, "botao de classifica", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(MainActivity.this, PerguntaSoloSuperficialActivity.class));
-                }
-        );
+        buttonClassificarSuperificial.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PerguntaSoloSuperficialActivity.class)));
 
-        buttonClassificarSubsuperficial.setOnClickListener(v -> {
-                    Toast.makeText(MainActivity.this, "botao de classifica", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(MainActivity.this, PerguntaSoloSubsuperficialActivity.class));
-                }
-        );
+        buttonClassificarSubsuperficial.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PerguntaSoloSubsuperficialActivity.class)));
     }
 }

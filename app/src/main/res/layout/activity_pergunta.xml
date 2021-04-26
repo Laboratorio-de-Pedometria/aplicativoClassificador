@@ -8,43 +8,62 @@
 
     <Button
         android:id="@+id/button_sim"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:layout_height="74dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="50dp"
-        android:text="Sim" />
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="87dp"
+        android:text="Sim"
+        app:backgroundTint="#66558D80" />
 
     <Button
         android:id="@+id/button_nao"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:layout_height="74dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="50dp"
-        android:text="não" />
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="87dp"
+        android:text="não"
+        app:backgroundTint="#66AB824C" />
 
     <TextView
         android:id="@+id/textView_pergunta"
-        android:layout_width="223dp"
-        android:layout_height="169dp"
+        android:layout_width="340dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="89dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="18dp"
+        android:background="#BF4D3D34"
         android:text="Pergunta"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView_ajuda"
-        android:layout_width="217dp"
+        android:layout_width="340dp"
         android:layout_height="270dp"
         android:layout_alignParentStart="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="96dp"
-        android:text="Texto Ajuda" />
+        android:layout_marginStart="35dp"
+        android:background="#994D3D34"
+        android:text="Texto Ajuda"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button_reiniciar"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Reiniciar"
+        app:backgroundTint="#664D3D34" />
+
 </RelativeLayout>
