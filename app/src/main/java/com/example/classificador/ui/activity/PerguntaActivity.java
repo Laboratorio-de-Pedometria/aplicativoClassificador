@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,6 +64,7 @@ public abstract class PerguntaActivity extends AppCompatActivity {
         TextView perguntTextView = findViewById(R.id.textView_pergunta);
         perguntTextView.setText(raiz.getTextoPrincipal());
         TextView ajudTextView = findViewById(R.id.textView_ajuda);
+        ajudTextView.setMovementMethod(new ScrollingMovementMethod());
         ajudTextView.setText(raiz.getTextoAjuda());
 
 
@@ -83,6 +85,7 @@ public abstract class PerguntaActivity extends AppCompatActivity {
             TextView perguntaTextView = findViewById(R.id.textView_pergunta);
             perguntaTextView.setText(service.getNoAtual().getTextoPrincipal());
             TextView ajudsTextView = findViewById(R.id.textView_ajuda);
+            ajudsTextView.setMovementMethod(new ScrollingMovementMethod());
             ajudsTextView.setText(service.getNoAtual().getTextoAjuda());
         } else {
             TextView perguntaTextView = findViewById(R.id.textView_pergunta);

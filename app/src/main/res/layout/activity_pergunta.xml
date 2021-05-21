@@ -37,9 +37,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="35dp"
         android:layout_marginTop="18dp"
-        android:background="#BF4D3D34"
+        android:background="#FFFFFFFF"
+        android:fontFamily="sans-serif-thin"
         android:text="Pergunta"
-        android:textColor="#FFFFFF"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -48,13 +51,17 @@
         android:id="@+id/textView_ajuda"
         android:layout_width="340dp"
         android:layout_height="270dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         android:layout_centerInParent="true"
         android:layout_marginStart="35dp"
-        android:background="#994D3D34"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFFFF"
+        android:focusable="auto"
+        android:lineSpacingExtra="2sp"
         android:text="Texto Ajuda"
-        android:textAlignment="textStart"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000"
+        android:scrollbars = "vertical"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/button_reiniciar"
