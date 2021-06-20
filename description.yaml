@@ -38,4 +38,13 @@ Authors:
     affiliation: Embrapa Informática Agropecuária
     role: Desenvolvimento da base de dados (ctb)
     orcid: 
-
+References:
+  - item: |
+    Santos, H. G. et al. Sistema Brasileiro de Classificação de Solos. 5. ed. Brasília, DF:
+    Embrapa, 2018. p. 531. URL: http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1094003
+  - item: |
+    IBGE. Manual Técnico de Pedologia. 3. ed. Rio de Janeiro, RJ: Instituto Brasileiro de Geografia 
+    e Estatística, 2015. p. 430. URL: https://biblioteca.ibge.gov.br/visualizacao/livros/liv95017.pdf
+Citation: |
+  Samuel-Rosa, A.; Moreira, L. D. S. soilDT - the soil classification app. Santa Helena, PR:
+  Universidade Tecnológica Federal do Paraná. 2021.
