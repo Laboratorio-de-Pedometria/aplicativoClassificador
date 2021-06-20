@@ -2,9 +2,7 @@
 
 ## Título da proposta
 
-Desenvolvimento de um Software Livre e de Código Aberto para o Aprendizado Ativo da Classificação de Solos[^edital]
-
-[^edital]: EDITAL 37/2020 - PROGRAD. SELEÇÃO DE ESTUDANTES BOLSISTAS E VOLUNTÁRIOS PARA O APOIO AO DESENVOLVIMENTO DE RECURSOS EDUCACIONAIS ABERTOS NA GRADUAÇÃO DA UTFPR (RETIFICADO em 29/01/2021). <https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2039976&id_orgao_publicacao=0>
+Desenvolvimento de um Software Livre e de Código Aberto para o Aprendizado Ativo da Classificação de Solos
 
 ## Tema de estudo
 
@@ -36,3 +34,7 @@ O relatório de implementação, a base de dados e o código fonte serão enviad
 ## Metodologia da proposta
 
 Os critérios taxonômicos multidimensionais do SiBCS serão decompostos em regras de decisão de saída binária. O modelo digital de representação resultante—um diagrama de árvore de decisão—terá estrutura similar àquela de sistemas de sistemática e taxonomia biológica, os quais são conhecidos pelos alunos desde o ensino médio. Uma aplicação para dispositivos móveis com sistema operacional Android será desenvolvida para tornar a navegação nesse diagrama amigável e intuitiva. Nela, apenas uma regra de decisão será apresentada por vez, abstraindo a estrutura multidimensional subjacente do SiBCS. Para cada regra, um menu de ajuda apresentará os conceitos e definições exigidos e oferecerá dicas sobre como analisar os dados. Como resultado, os alunos serão capazes de aplicar o SiBCS com mínimo acompanhamento docente, bastando que lhe tenham sido apresentados os conceitos fundamentais da classificação de solos. Além disso, a simplificação do SiBCS permitirá aos alunos aplicá-lo a uma gama maior de solos dos biomas brasileiros. Isso significa ganhar amplo conhecimento sobre os solos brasileiros e desenvolver entendimento aprofundado da estrutura e funcionamento do SiBCS e processos de produção de informação de recursos do solo em geral. Quanto ao desenvolvimento do modelo digital de representação do SiBCS, será preciso construir uma base de dados com seus critérios taxonômicos. Isso será realizado utilizando ferramentas web gratuitas e contará com o auxílio de especialistas da UFRRJ, UFSM e Embrapa Solos. Para o desenvolvimento da aplicação, será utilizado a plataforma de desenvolvimento integrado Android Studio (sob licença Apache 2.0 - software livre) e linguagem de programação Java (sob licença GNU General Public License - software livre), para o que será fundamental a atuação do aluno bolsista. A última fase consistirá na validação da base de dados e da aplicação, realizadas por especialistas da UFRRJ, UFSM, IBGE e Embrapa Informática Agropecuária. Os custos envolvidos com a atuação dos membros externos ficarão sob responsabilidade daqueles.
+
+<hr>
+
+EDITAL 37/2020 - PROGRAD. SELEÇÃO DE ESTUDANTES BOLSISTAS E VOLUNTÁRIOS PARA O APOIO AO DESENVOLVIMENTO DE RECURSOS EDUCACIONAIS ABERTOS NA GRADUAÇÃO DA UTFPR (RETIFICADO em 29/01/2021). <https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2039976&id_orgao_publicacao=0>
