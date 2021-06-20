@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Row;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReference;
 
 import Arvore.Arvore;
 import Arvore.No;
@@ -40,19 +41,19 @@ public class Application {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static Arvore processaListaDecisao(List<Decisao> listaDecisao) {
-        int indiceRaiz = 1, indiceSeguinteRaiz = 2, indiceFinal = listaDecisao.size() - 1;
+        int indiceRaiz = 1, indiceSeguinteRaiz = 2, indiceFinal = listaDecisao.size();
         Decisao decisaoInicial = listaDecisao.get(indiceRaiz);
         No raiz = Helper.criarNoRaiz(decisaoInicial.getNodeId(), decisaoInicial.getTextoPrincipal(), decisaoInicial.getTextoAjuda(), decisaoInicial.getDirecaoNao(), decisaoInicial.getDirecaoSim());
         Arvore arvoreDecisao = new Arvore(raiz);
-        No no = null;
-        try {
-            for (Decisao decisao : listaDecisao.subList(indiceSeguinteRaiz, indiceFinal)) {
-                no = arvoreDecisao.depthFirstSerach(decisao.getNodeId());
-                arvoreDecisao.preencherNoPelaDecisao(no, decisao);
+        AtomicReference<No> no = new AtomicReference<No>();
+        listaDecisao.subList(indiceSeguinteRaiz, indiceFinal).forEach(decisao -> {
+            try {
+                no.set(arvoreDecisao.depthFirstSerach(decisao.getNodeId()));
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception ex) {
-
-        }
+            arvoreDecisao.preencherNoPelaDecisao(no.get(), decisao);
+        });
         return arvoreDecisao;
     }
 }

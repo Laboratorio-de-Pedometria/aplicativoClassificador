@@ -16,4 +16,5 @@ public class PerguntaSoloSuperficialActivity extends PerguntaActivity{
         return R.raw.basededados;
     }
 
+
 }

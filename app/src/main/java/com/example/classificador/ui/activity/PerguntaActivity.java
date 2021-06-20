@@ -14,19 +14,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.classificador.R;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 import Application.Application;
 import Arvore.ArvoreService;
 import Arvore.No;
 import Entrada.Decisao;
 
+import static Application.Application.eLinhaValida;
+import static Utils.Helper.TELA_INICIAL;
+
 public abstract class PerguntaActivity extends AppCompatActivity {
+
+    private List<Decisao> listaDecisao;
+    private ArvoreService service;
+    private Button buttonSim;
+    private Button buttonNao;
+    private Button buttonReiniciar;
 
     public abstract Handler getHideHandler();
 
@@ -37,29 +49,27 @@ public abstract class PerguntaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pergunta);
-
-        Button buttonSim = findViewById(R.id.button_sim);
-        Button buttonNao = findViewById(R.id.button_nao);
-        Button buttonReiniciar = findViewById(R.id.button_reiniciar);
+        buttonSim = findViewById(R.id.button_sim);
+        buttonNao = findViewById(R.id.button_nao);
+        buttonReiniciar = findViewById(R.id.button_reiniciar);
 
         InputStream fisPlanilha = getResources().openRawResource(getId());
-        List<Decisao> listaDecisao = new ArrayList<>();
-
+        listaDecisao = new ArrayList<>();
         try {
             XSSFWorkbook workbook = new XSSFWorkbook(fisPlanilha);
             XSSFSheet sheet = workbook.getSheetAt(0);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                sheet.rowIterator().forEachRemaining(linha -> {
-                    if (Application.eLinhaValida(linha)) {
-                        listaDecisao.add(Application.criarDecisaoPorLinha(linha));
-                    }
-                });
+            Iterator<Row> iterator = sheet.iterator();
+            Row currentRow = iterator.next();
+            while (eLinhaValida(currentRow)) {
+                listaDecisao.add(Application.criarDecisaoPorLinha(currentRow));
+                currentRow = iterator.next();
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        ArvoreService service = new ArvoreService(Application.processaListaDecisao(listaDecisao));
+        service = new ArvoreService(Application.processaListaDecisao(listaDecisao));
         No raiz = service.getNoAtual();
         TextView perguntTextView = findViewById(R.id.textView_pergunta);
         perguntTextView.setText(raiz.getTextoPrincipal());
@@ -81,19 +91,42 @@ public abstract class PerguntaActivity extends AppCompatActivity {
     }
 
     private void processaNoAtual(ArvoreService service, Button buttonSim, Button buttonNao) {
-        if (!service.getNoAtual().iseNoFinal()) {
-            TextView perguntaTextView = findViewById(R.id.textView_pergunta);
-            perguntaTextView.setText(service.getNoAtual().getTextoPrincipal());
-            TextView ajudsTextView = findViewById(R.id.textView_ajuda);
-            ajudsTextView.setMovementMethod(new ScrollingMovementMethod());
-            ajudsTextView.setText(service.getNoAtual().getTextoAjuda());
-        } else {
-            TextView perguntaTextView = findViewById(R.id.textView_pergunta);
-            perguntaTextView.setText(service.getNoAtual().getTextoPrincipal());
+        TELA_INICIAL = false;
+        TextView perguntaTextView;
+        TextView ajudaTextView;
+        perguntaTextView = findViewById(R.id.textView_pergunta);
+        perguntaTextView.setText(service.getNoAtual().getTextoPrincipal());
+        ajudaTextView = findViewById(R.id.textView_ajuda);
+        ajudaTextView.setMovementMethod(new ScrollingMovementMethod());
+        ajudaTextView.setText(service.getNoAtual().getTextoAjuda());
+
+        if (service.getNoAtual().iseNoFinal()) {
             getHideHandler().post(() -> {
                 buttonSim.setVisibility(View.GONE);
                 buttonNao.setVisibility(View.GONE);
             });
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void onBackPressed() {
+        if (TELA_INICIAL) {
+            super.onBackPressed();
+        } else {
+            if (service.getNoAtual().iseNoFinal()) {
+                getHideHandler().post(() -> {
+                    buttonSim.setVisibility(View.VISIBLE);
+                    buttonNao.setVisibility(View.VISIBLE);
+                });
+            }
+            service.voltar();
+            if (Objects.isNull(service.getNoAtual())) {
+                TELA_INICIAL = true;
+                startActivity(new Intent(PerguntaActivity.this, MainActivity.class));
+            } else {
+                processaNoAtual(service, buttonSim, buttonNao);
+            }
         }
     }
 

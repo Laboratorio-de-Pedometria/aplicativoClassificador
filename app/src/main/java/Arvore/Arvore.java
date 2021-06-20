@@ -52,12 +52,21 @@ public class Arvore {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void criarFilhoEsquerdaPeloId(No principal, String filhoEsquerda) {
-        Helper.criarFilhoEsquerda(principal, mapNos.getOrDefault(filhoEsquerda, new No(filhoEsquerda)));
+        No esquerda = buscarNoMapeado(filhoEsquerda);
+        mapNos.putIfAbsent(esquerda.getNodeId(), esquerda);
+        Helper.criarFilhoEsquerda(principal, esquerda);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void criarFilhoDireitaPeloId(No principal, String filhoDireita) {
-        Helper.criaFilhoDireita(principal, mapNos.getOrDefault(filhoDireita, new No(filhoDireita)));
+        No direita = buscarNoMapeado(filhoDireita);
+        mapNos.putIfAbsent(direita.getNodeId(), direita);
+        Helper.criaFilhoDireita(principal, direita);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private No buscarNoMapeado(String filho){
+        return Objects.isNull(mapNos.get(filho)) ? new No(filho) : mapNos.get(filho);
     }
 
     public No getRaiz(){

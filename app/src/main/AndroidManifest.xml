@@ -19,6 +19,7 @@
         <activity android:name=".ui.activity.PerguntaActivity" />
         <activity android:name=".ui.activity.PerguntaSoloSubsuperficialActivity" />
         <activity android:name=".ui.activity.PerguntaSoloSuperficialActivity" />
+        <activity android:name=".ui.activity.SaibaMaisActivity" />
     </application>
 
 </manifest>

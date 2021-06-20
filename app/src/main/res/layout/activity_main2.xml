@@ -3,30 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="#FFFFFF">
 
     <Button
         android:id="@+id/button_classificar_superficial"
-        android:layout_width="267dp"
+        android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginEnd="65dp"
         android:layout_marginBottom="331dp"
         android:text="Superficial"
         app:backgroundTint="#AB824C" />
 
     <Button
         android:id="@+id/button_classificar_subsuperficial"
-        android:layout_width="267dp"
+        android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="64dp"
         android:layout_marginBottom="217dp"
         android:text="Subsuperficial"
         app:backgroundTint="#AB824C" />
+
+    <Button
+        android:id="@+id/button_saiba_mais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Saiba Mais"
+        app:backgroundTint="#AB824C" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="339dp"
+        android:layout_height="186dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="46dp"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/logo_utfpr" />
 
 </RelativeLayout>

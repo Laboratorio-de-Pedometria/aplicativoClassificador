@@ -35,7 +35,7 @@ public class No {
         this.direita = null;
     }
 
-    public No(String nodeId, String textoPrincipal, String textoAjuda, boolean eNoFinal, No esquerda, No direita) {
+    public No(String nodeId, String textoPrincipal, String textoAjuda, boolean eNoFinal, No esquerda, No direita, No anterior) {
         this.nodeId = nodeId;
         this.textoPrincipal = textoPrincipal;
         this.textoAjuda = textoAjuda;
