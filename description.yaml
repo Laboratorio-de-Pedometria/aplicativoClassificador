@@ -1,0 +1,41 @@
+Title: soilDT - the soil classification app
+Summary: |
+  Software livre e de código aberto para o aprendizado ativo da classificação de solos. O software
+  foi desenvolvido com fomento do Edital 37/2020 de Apoio ao Desenvolvimento de Recursos 
+  Educacionais Abertos, uma iniciativa da Pró-Reitoria de Graduação e Educação Profissional
+  (PROGRAD) da Universidade Tecnológica Federal do Paraná (UTFPR).
+Version: 0.0.1
+Date: 2021-06-20
+License: especificar licença
+URL: https://github.com/Laboratorio-de-Pedometria/soilDT/
+BugReports: https://github.com/Laboratorio-de-Pedometria/soilDT/issues
+Authors:
+  - name: Alessandro Samuel-Rosa
+    affiliation: Universidade Tecnológica Federal do Paraná
+    role: Concepção e design (aut, cre)
+    orcid: 
+  - name: Letícia D Santi Moreira
+    affiliation: Universidade Tecnológica Federal do Paraná
+    role: Design e desenvolvimento da aplicação (aut, cre)
+    orcid: 
+  - name: Giuvane Conti
+    affiliation: Universidade Tecnológica Federal do Paraná
+    role: Desenvolvimento da aplicação (ctb)
+    orcid: 
+  - name: Fabrício de Araújo Pedron
+    affiliation: Universidade Federal de Santa Maria
+    role: Desenvolvimento da base de dados (ctb)
+    orcid: 
+  - name: Ademir Fontana
+    affiliation: Embrapa Solos
+    role: Desenvolvimento da base de dados (ctb)
+    orcid: 
+  - name: Ricardo Simão Diniz Dalmolin
+    affiliation: Universidade Federal de Santa Maria
+    role: Desenvolvimento da base de dados (ctb)
+    orcid: 
+  - name: Glauber José Vaz
+    affiliation: Embrapa Informática Agropecuária
+    role: Desenvolvimento da base de dados (ctb)
+    orcid: 
+
