@@ -17,26 +17,17 @@ public class SaibaMaisActivity extends Activity {
         TextView saibaMaisTextView = findViewById(R.id.textView_texto_de_creditos);
         String textoCreditos = "Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao " +
                 "Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR.\n\n" +
-                "Dados de autoria: \n\nAlessandro Samuel-Rosa, Professor Coordenador,\n alessandrorosa@utfpr.edu.br.\n\n" +
-                "Letícia D Santi Moreira, Bolsista de Iniciação Científica,\n leticiamoreira@alunos.utfpr.edu.br\n\n" +
-                "Giuvane Conti, Professor \n" +
-                "Colaboradores: \n" +
-                "Dados de autoria (responsável intelectual pelo conteúdo) e colaboradores;, Créditos (indicar as " +
-                "funções desempenhadas pelos membros da equipe);,Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao" +
-                " Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR " +
-                "Dados de autoria (responsável intelectual pelo conteúdo) e colaboradores;, Créditos (indicar as " +
-                "funções desempenhadas pelos membros da equipe);,Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao" +
-                " Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR " +
-                "Dados de autoria (responsável intelectual pelo conteúdo) e colaboradores;, Créditos (indicar as " +
-                "funções desempenhadas pelos membros da equipe);,Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao" +
-                " Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR " +
-                "Dados de autoria (responsável intelectual pelo conteúdo) e colaboradores;, Créditos (indicar as " +
-                "funções desempenhadas pelos membros da equipe);,Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao" +
-                " Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR " +
-                "Dados de autoria (responsável intelectual pelo conteúdo) e colaboradores;, Créditos (indicar as " +
-                "funções desempenhadas pelos membros da equipe);,Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao" +
-                " Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR " +
+                "Autores: negrito\n\n" +
+                "Alessandro Samuel-Rosa\nUniversidade Tecnológica Federal do Paraná\nConcepção e design (aut, cre)\nalessandrorosa@utfpr.edu.br\n\n" +
+                "Letícia D Santi Moreira\nUniversidade Tecnológica Federal do Paraná\nDesign e desenvolvimento da aplicação (aut, cre)\nleticiamoreira@alunos.utfpr.edu.br\n\n" +
+                "Contribuidores: negrito\n\n" +
+                "Giuvane Conti\nUniversidade Tecnológica Federal do Paraná\nDesenvolvimento da aplicação\n\n"+
+                "Fabrício de Araújo Pedron\nUniversidade Federal de Santa Maria\nDesenvolvimento da base de dados\n\n" +
+                "Ademir Fontana\nEmbrapa Solos\nDesenvolvimento da base de dados\n\n"+
+                "Ricardo Simão Diniz Dalmolin\nUniversidade Federal de Santa Maria\nDesenvolvimento da base de dados\n\n"+
+                "Glauber José Vaz\nEmbrapa Informática Agropecuária\nDesenvolvimento da base de dados\n\n\n\n\n"+
                 "";
+
         saibaMaisTextView.setText(textoCreditos);
         saibaMaisTextView.setMovementMethod(new ScrollingMovementMethod());
     }

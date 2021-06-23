@@ -13,7 +13,7 @@ public class PerguntaSoloSubsuperficialActivity extends PerguntaActivity{
 
     @Override
     public int getId() {
-        return R.raw.basededados;
+        return R.raw.base_dados_superficial;
     }
 
 
