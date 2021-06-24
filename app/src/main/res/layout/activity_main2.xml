@@ -6,14 +6,48 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="5dp"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:src="@mipmap/ic_logo_utfpr_foreground" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:src="@mipmap/ic_logo_laboratoria_foreground" />
+        </TableRow>
+    </TableLayout>
+
     <Button
         android:id="@+id/button_classificar_superficial"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentStart="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="790dp"
+        android:layout_below="@+id/text_descricaoapp"
+        android:layout_marginTop="140dp"
         android:text="Horizonte diagnóstico superficial"
+        android:textSize="15sp"
         app:backgroundTint="#AB824C" />
 
     <Button
@@ -27,6 +61,7 @@
         android:layout_marginBottom="81dp"
         android:text="Subsuperficial"
         android:visibility="gone"
+        android:textSize="15sp"
         app:backgroundTint="#AB824C"
         tools:visibility="gone" />
 
@@ -38,33 +73,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
+        android:textSize="15sp"
         android:text="Saiba Mais"
         app:backgroundTint="#AB824C" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="253dp"
-        android:layout_height="252dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="66dp"
-        android:background="#FFFFFF"
-        android:src="@mipmap/ic_logo_utfpr_foreground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="274dp"
-        android:layout_height="206dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="4dp"
-        android:background="#FFFFFF"
-        android:src="@mipmap/ic_logo_laboratoria_foreground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_nomeApp"
@@ -93,5 +104,4 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#000000"
         android:textSize="24sp" />
-
 </RelativeLayout>
