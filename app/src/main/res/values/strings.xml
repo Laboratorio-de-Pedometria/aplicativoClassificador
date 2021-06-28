@@ -17,10 +17,15 @@
                 "\nSamuel-Rosa, A.; Moreira, L. D. S. soilDT - the soil classification app. Santa Helena, PR: Universidade Tecnológica Federal do Paraná. 2021."
                 "\n<b>Contato</b>"
                 "\nEncontrou um problema? Quer dar uma opinião? Quer saber como colaborar?"
-                "\nAcesse o espaço de desenvolvimento do Laboratório de Pedometria no <a href="https://github.com/Laboratorio-de-Pedometria/soilDT/issues">GitHub</a> e deixe uma mensagem para nossa equipe.\n"
+                "\nAcesse o espaço de desenvolvimento do Laboratório de Pedometria no <a href="https://github.com/Laboratorio-de-Pedometria/soilDT/issues">GitHub</a> e deixe uma mensagem para nossa equipe."
                 "\n<a href="https://github.com/Laboratorio-de-Pedometria/soilDT/">Versão: 0.0.1</a>"
                 "\nData: 2021-06-20"
-                "\nLicensa: especificar licença"
-
+                "\n<b>Licensa"</b>
+                "\n\nCopyright 2021 UTFPR"
+                "\nLicensed under the Apache License, Version 2.0 (the "License");"
+                "\nyou may not use this file except in compliance with the License."
+                "\nYou may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>"
+                "\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+                "\nSee the License for the specific language governing permissions and limitations under the License."
         </string>
 </resources>
