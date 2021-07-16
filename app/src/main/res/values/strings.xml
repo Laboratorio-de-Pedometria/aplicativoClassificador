@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">soilDT</string>
-    <string name="txtCredits">"Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR.\n"
+    <string name="txtCredits">"Recurso Educacional Aberto produzido com o fomento do Edital de Apoio ao Desenvolvimento de Recursos Educacionais Abertos na Graduação da UTFPR, projeto AGR05.\n"
                 "\n<b>Autores</b>"
                 "\n<a href="https://orcid.org/0000-0003-0877-1320">Alessandro Samuel-Rosa\n</a>Universidade Tecnológica Federal do Paraná\nConcepção e design (aut, cre)"
                 "\n<a href="https://orcid.org/0000-0002-4172-6508">Letícia D Santi Moreira\n</a>Universidade Tecnológica Federal do Paraná\nDesign e desenvolvimento da aplicação (aut, cre)"
+                "\n<a href="https://orcid.org/0000-0002-3389-5053">Giuvane Conti\n</a>Universidade Tecnológica Federal do Paraná\nDesenvolvimento da aplicação (aut, cre)"
                 "\n<b>Contribuidores</b>"
-                "\n<a href="https://orcid.org/0000-0002-3389-5053" style="text-decoration:none">Giuvane Conti\n</a>Universidade Tecnológica Federal do Paraná\nDesenvolvimento da aplicação"
                 "\n<a href="">Fabrício de Araújo Pedron\n</a>Universidade Federal de Santa Maria\nDesenvolvimento da base de dados"
                 "\n<a href="">Ademir Fontana\n</a>Embrapa Solos\nDesenvolvimento da base de dados"
                 "\n<a href="https://orcid.org/0000-0002-8834-9869">Ricardo Simão Diniz Dalmolin\n</a>Universidade Federal de Santa Maria\nDesenvolvimento da base de dados"
@@ -20,12 +20,17 @@
                 "\nAcesse o espaço de desenvolvimento do Laboratório de Pedometria no <a href="https://github.com/Laboratorio-de-Pedometria/soilDT/issues">GitHub</a> e deixe uma mensagem para nossa equipe."
                 "\n<a href="https://github.com/Laboratorio-de-Pedometria/soilDT/">Versão: 0.0.1</a>"
                 "\nData: 2021-07-13"
-                "\n<b>Licensa"</b>
+                "\n<b>Licença"</b>
                 "\n\nCopyright 2021 UTFPR"
-                "\nLicensed under the Apache License, Version 2.0 (the "License");"
+                "\nLicensed under the Apache License, Version 2.0;"
                 "\nyou may not use this file except in compliance with the License."
-                "\nYou may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>"
+                "\nYou may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0.</a>"
                 "\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
                 "\nSee the License for the specific language governing permissions and limitations under the License."
+                "\n\nLicenciado sob a Licença Apache, Versão 2.0;"
+                "\nVocê não deve usar este arquivo, exceto em conformidade com a Licença."
+                "\nVocê pode obter uma cópia da Licença em <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0.</a>"
+                "\nA menos que exigido pela lei aplicável ou acordado por escrito, software distribuído sob a Licença é distribuído em uma BASE "COMO ESTÁ", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas."
+                "\nConsulte a Licença para as permissões específicas que regem o idioma e limitações sob a Licença."
         </string>
 </resources>
